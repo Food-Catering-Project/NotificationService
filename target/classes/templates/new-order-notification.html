@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Order Received</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .container { max-width: 600px; background: white; padding: 20px; border-radius: 8px; }
+        h2 { color: #007bff; }
+        .order-details { background: #f9f9f9; padding: 10px; border-radius: 5px; }
+        .footer { margin-top: 20px; font-size: 12px; color: gray; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>New Order Received!</h2>
+    <p>Hello <b th:text="${restaurantName}"></b>,</p>
+    <p>You have received a new order from <b th:text="${userName}"></b>!</p>
+    <div class="order-details">
+        <p><b>Order ID:</b> <span th:text="${orderId}"></span></p>
+        <p><b>Date:</b> <span th:text="${orderDate}"></span></p>
+        <p><b>Total Amount:</b> ₹<span th:text="${totalAmount}"></span></p>
+        <p><b>Delivery Address:</b> <span th:text="${deliveryAddress}"></span></p>
+    </div>
+    <p>Please start preparing the order as soon as possible.</p>
+    <div class="footer">
+        <p>Thank you for your partnership!</p>
+    </div>
+</div>
+</body>
+</html>
