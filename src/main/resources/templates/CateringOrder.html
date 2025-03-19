@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Catering Order Received</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .container { max-width: 600px; background: white; padding: 20px; border-radius: 8px; }
+        h2 { color: #007bff; }
+        .order-details { background: #f9f9f9; padding: 10px; border-radius: 5px; }
+        .footer { margin-top: 20px; font-size: 12px; color: gray; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Catering Order Received!</h2>
+    <p>Hello <b th:text="${Email}"></b>,</p>
+    <p>THIS IS YOUR CATERING ORDER!!!</p>
+    <div class="order-details">
+        <p><b>Order ID:</b> <span th:text="${CateringorderId}"></span></p>
+        <p><b>Date:</b> <span th:text="${Date}"></span></p>
+        <p><b>Total No. of Persons:</b> <span th:text="${noOfPerson}"></span></p>
+        <p><b>Phone Number:</b> <span th:text="${phoneNo}"></span></p>
+    </div>
+    <p>Your Catering Order Placed.</p>
+    <div class="footer">
+        <p>Thank you for your partnership!</p>
+    </div>
+</div>
+</body>
+</html>
